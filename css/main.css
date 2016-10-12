@@ -1,0 +1,43 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+h1, h2, h3{  font-family: "Arial"; color: #DD0A1B;}
+
+h2 {/*border-bottom: 1px solid #DD0A1B;*/}
+.logo{text-align: center;margin-top:1%;}
+	.logo img{max-width:100%;}
+
+.datos{margin-top:2%;}
+
+.h1{text-align: center;}
+.ofertas {}
+	.ofertas .col-md-4{padding:0 7px;}
+	.ofertas_oferta{background: #DD0A1B; border-radius: 8px; color: #fff; margin-bottom: 7px; padding:7px 0; text-align: center;}
+	.msg_ofertas label{color: #DD0A1B;}
+
+
+.footer div{color: #DD0A1B; margin:3% 0; text-align: center;}
+.pack-item {margin-bottom: 3px;}
+	.pack-item .izq{display: inline-block;width: 90%; border-bottom: 1px solid #DD0A1B; }
+	.pack-item .der{display: inline-block;width: 9%;padding-bottom: 4px; text-align: right;}
+	.pack-item .izq-menor{width:85%;}
+	.pack-item .der-mayor{width:14%;}
+	.pack-item .sub{font-size:12px;}
+
+/*	.pack-item div.class{width:90%; display: inline-block;}
+		.pack-item_texto{display: inline-block;}
+		.pack-item_linea{display: inline-block; width: 60%; border-bottom: 1px solid #8C8C8C;}
+
+ 	.pack-item_precio{width:9%; display: inline-block; text-align: right;}
+
+*/
+.cont_total{width:100%;border:3px solid #DD0A1B;padding:1% 4% 1% 4%;}
+	.messages {text-align: right;display: inline-block; width: 68%;vertical-align: top;}
+	.aviso {color:#000; font-style: italic; font-size: 12px;}
+	#cantidad, #cantidad_iva{ width:80px; }
+	.observations{display: inline-block;text-align: left;width: 30%; vertical-align: top;}
+		.observations label{font-weight: normal; color: #DD0A1B; font-style: italic;}

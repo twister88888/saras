@@ -1,0 +1,271 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+      <div class="container">
+        <!--<form id="myform" name="myform" action="envio.php" method="POST">-->
+        <form id="myform" name="myform" action="" method="POST">
+          <div class="row">
+            <div class="logo col-md-3 col-sm-5">
+              <img src="img/logo.jpg" alt="Sara´s Audiovisuales">
+            </div>
+            <div class="datos col-md-9 col-sm-7">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Introduce tu nombre" value="" required />
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="phone" name="phone" placeholder="Introduce tu teléfono" required value=""/>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu email" value="" required />
+              </div>
+              <div class="form-group">
+                <input type="date" class="form-control" id="date" name="date" placeholder="Fecha del evento" value="" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="place" name="place" placeholder="Dirección, Localidad, Ciudad" value="" required />
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="invited" name="invited" placeholder="Nº de invitados" required value="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="h1"><h1><i>Presupuesto</i></h1></div>
+
+          <div class="row">
+            <!-- Pack Sonido -->
+            <div class="pack-sonido col-sm-12">
+              <h2>Pack Sonido</h2>
+
+              <!-- Pack Básico -->
+              <div class="pack form-group">
+                <h3>Básico</h3>
+                <div class="pack-item">Sonido: P.A. (2x600Wrms) = 1200Wrms + ILUMINACIÓN: Truss 3mts con luces</div>
+                <div class="pack-item">Técnico cualificado</div>
+                <div class="pack-item">
+                  <div class="izq">Disc Jockey: 3 Horas </div>
+                  <div class="der">350€ <input type="radio" id="sonido_basico" name="sonido_basico" value="350"></div>
+                </div>
+                <div class="pack-item">
+                  <div class="izq">Pack sonido básico sin DJ</div>
+                  <div class="der">250€ <input type="radio" id="sonido_basico2" name="sonido_basico" value="250"></div>
+                </div>
+              </div>
+              <!-- End Pack Básico -->
+
+              <!-- Pack Superior -->
+              <div class="pack form-group">
+                <h3>Superior</h3>
+                <div class="pack-item">Sonido: P.A. (4x600Wrms) = 2400Wrms + ILUMINACIÓN: Truss 4mts con luces</div>
+                <div class="pack-item">Técnico cualificado</div>
+                <div class="pack-item">Disc Jockey: 3 Horas</div>
+                <div class="pack-item">
+                  <div class="izq">ESCENARIO: 2,5x1,90mts (REGALO)</div>
+                  <div class="der">475€ <input type="radio" id="sonido_superior" name="sonido_superior" value="475"></div>
+                </div>
+                <div class="pack-item">
+                  <div class="izq">Pack sonido superior sin DJ</div>
+                  <div class="der">375€ <input type="radio" id="sonido_superior2" name="sonido_superior" value="375"></div>
+                </div>
+              </div>
+              <!-- End Pack Superior -->
+            </div>
+          </div>
+          <!-- End Row Sonido -->
+
+          <!-- Pack Extras -->
+          <div class="row">
+            <div class="extras form-group col-sm-12">
+              <h2>Extras</h2>
+              <div class="pack-item">
+                <div class="izq">Horas DJ'S</div>
+                <div class="der"><span id="precio_hora"></span>
+                  <select id="extras_dj" name="extras_dj">
+                    <option value="0">-</option>
+                    <option value="75">1h</option>
+                    <option value="150">2h</option>
+                    <option value="225">3h</option>
+                    <option value="300">4h</option>
+                    <option value="375">5h</option>
+                  </select>
+                </div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Si llevara grupo que no sea contratado con nosotros</div>
+                <div class="der">75€ <input type="checkbox" id="extras_grupo" name="extras_grupo" value="75"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Sonido ceremonia civil</div>
+                <div class="der">150€ <input type="checkbox" id="extras_civil" name="extras_civil" value="150"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq izq-menor">Sonido ambiente aperitivo 2 o 4 (columnas)</div>
+                <div class="der der-mayor">100 o 150€ <input type="radio" id="extras_ambiente" name="extras_ambiente" value="100">&nbsp;
+                <input type="radio" id="extras_ambiente2" name="extras_ambiente" value="150"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq izq-menor">Sonido ambiente banquete 2 o 4 (columnas)</div>
+                <div class="der der-mayor">100 o 150€ <input type="radio" id="extras_banquete" name="extras_banquete" value="100">&nbsp;
+                <input type="radio" id="extras_banquete2" name="extras_banquete" value="150"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Proyector</div>
+                <div class="der">80€ <input type="checkbox" id="proyector" name="proyector" value="80"></div>
+              </div>
+            </div>
+          </div>
+          <!-- End Row Extras -->
+
+          <!-- Pack Animación -->
+          <div class="row">
+            <div class="animacion form-group col-sm-12">
+              <h2>Animación</h2>
+              <div class="pack-item">
+                <div class="izq">Dos monitores cualificados durante 4H <i class="sub">(hora extra / monitor 20€)</i></div>
+                <div class="der">250€ <input type="radio" id="monitores" name="monitores" value="250"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Dos monitores cualificados durante toda la boda</div>
+                <div class="der">400€ <input type="radio" id="monitores2" name="monitores" value="400"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Castillo pequeño (sólo el tiempo que este los monitores)</div>
+                <div class="der">120€ <input type="checkbox" id="castillo" name="castillo" value="120"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Castillo mediano (sólo el tiempo que este los monitores)</div>
+                <div class="der">170€ <input type="checkbox" id="castillo2" name="castillo2" value="170"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Castillo grande (sólo el tiempo que este los monitores)</div>
+                <div class="der">220€ <input type="checkbox" id="castillo3" name="castillo3" value="220"></div>
+              </div>
+            </div>
+          </div>
+          <!-- End Row Animación -->
+
+          <!-- Pack Fotomatón -->
+          <div class="row">
+            <div class="fotomaton form-group col-sm-12">
+              <h2>Fotomatón</h2>
+              <div class="pack-item">
+                <div class="izq">Servicio 3h fotos ilimitadas, atresos</div>
+                <div class="der">450€ <input type="checkbox" id="fotos" name="fotos" value="450"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Sistema chroma o photocall digital</div>
+                <div class="der">100€ <input type="checkbox" id="chroma" name="chroma" value="100"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Hora extra de impresión</div>
+                <div class="der">75€ <input type="checkbox" id="impresion" name="impresion" value="75"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Hora extra grabación mensajes cortos</div>
+                <div class="der">75€ <input type="checkbox" id="grabacion" name="grabacion" value="75"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Foto álbum en impresión digital con las mejores fotos</div>
+                <div class="der">75€ <input type="checkbox" id="digital" name="digital" value="75"></div>
+              </div>
+            </div>
+          </div>
+          <!-- End Row Fotomatón -->
+
+          <div class="row">
+            <div class="extras form-group col-sm-12">
+              <div class="pack-item">
+                <div class="izq">Reportaje fotográfico de la barra libre</div>
+                <div class="der">250€ <input type="checkbox" id="reportaje" name="reportaje" value="250"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Filmaciones creativas</div>
+                <div class="der">550€ <input type="checkbox" id="filmaciones" name="filmaciones" value="550"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Coches clásicos (precio según zona)</div>
+                <div class="der"><input type="checkbox" id="coches" name="coches" value="si"></div>
+              </div>
+              <div class="pack-item">
+                <div class="izq">Desplazamiento 1€/km a partir 50km de Sevilla</div>
+                <div class="der">
+                  <input type="checkbox" id="desplazamiento" name="desplazamiento" value="">
+                  <input type="hidden" name="lat" id="lat"/>
+                  <input type="hidden" name="lng" id="long"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <!-- Ofertas -->
+          <div class="row">
+            <div class="ofertas form-group col-sm-12">
+              <h2>Ofertas</h2>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="ofertas_oferta">PACK SONIDO BÁSICO <br /> + UN SERVICIO <br /> 50% Sonido Banquete o Aperitivo</div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="ofertas_oferta">PACK SONIDO SUPERIOR <br /> + UN SERVICIO <br /> 50% Sonido Banquete o Aperitivo</div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="ofertas_oferta">PACK SONIDO SUPERIOR <br /> + DOS SERVICIOS <br /> 2x1 Sonido Banquete y Aperitivo</div>
+              </div>
+            </div>
+          </div>
+          <!-- End Ofertas -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="cont_total">
+                <div class="observations"><label>Observaciones</label><br />
+                  <textarea id="observations" name="observations" class="form-control" rows="3" ></textarea>
+                </div>
+                <div class="messages">
+                  <div id="ofertas" class="msg_ofertas"><label></label></div><br />
+                  <!--<div id="total"><label>TOTAL: </label> <label id="cantidad"></label></div><br />-->
+                  <input type="hidden" id="res_total" name="res_total" value="">
+                  <!--<div id="msg"></div><br />-->
+                  <button id="reset" type="reset" class="btn btn-default">Borrar</button>
+                  <button id="solicitar" type="submit" class="btn btn-default">Solicitar</button><br /><br />
+                  <!-- <div id="result"></div>-->
+                  <div class="aviso">El presupuesto tiene una validez de 30 días.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--<div id="map_canvas"></div>-->
+        </form>
+        <div class="footer">
+          <div class="col-md-3">SARA´S audiovisuales</div>
+          <div class="col-md-3">www.sarasaudiovisuales.com</div>
+          <div class="col-md-3">info@sarasaudiovisuales.com</div>
+          <div class="col-md-3">630 077 985</div>
+        </div>
+      </div><!-- End Containers -->
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD7zhIjIlT29qlW5UCbk6rAUtO67GCXE8&signed_in=true&region=ES&callback=initMap"
+        async defer></script>-->
+        <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD7zhIjIlT29qlW5UCbk6rAUtO67GCXE8&libraries=geometry" async defer></script>-->
+        <!---&callback=codeAddress-->
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+
+    </body>
+</html>
